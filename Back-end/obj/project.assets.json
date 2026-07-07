@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\GerenciadorFinancas\\GerenciadorFinancas.csproj",
-      "projectName": "GerenciadorFinancas",
-      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\GerenciadorFinancas\\GerenciadorFinancas.csproj",
+      "projectUniqueName": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
+      "projectName": "Back-end",
+      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
       "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\GerenciadorFinancas\\obj\\",
+      "outputPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
