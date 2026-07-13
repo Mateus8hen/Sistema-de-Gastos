@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x2aAkQJHcRo=",
+  "dgSpecHash": "5hH6lH/ukbg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
+  "projectFilePath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mateus\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.9\\microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
     "C:\\Users\\Mateus\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
@@ -12,9 +12,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "O pacote 'Microsoft.OpenApi' 2.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
+      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
+      "filePath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"

@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
-      "projectName": "Back-end",
-      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Back-end.csproj",
+      "projectUniqueName": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
+      "projectName": "Sistema-de-Gastos.API",
+      "projectPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
       "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\obj\\",
+      "outputPath": "C:\\Users\\Mateus\\Documents\\GitHub\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
