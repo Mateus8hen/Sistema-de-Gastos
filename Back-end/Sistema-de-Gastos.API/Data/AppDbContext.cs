@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Sistema_de_Gastos.API.Models;
 
 namespace Sistema_de_Gastos.API.Data;
 
@@ -8,4 +9,6 @@ public class AppDbContext : DbContext
         : base(options)
     {
     }
+
+    public DbSet<Categoria> Categorias { get; set; } = null!;
 }
