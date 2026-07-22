@@ -5,16 +5,20 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Gastos.API.Models
 {
-    public class Usuario
+    public class MetaFinanceira
     {
         public int Id { get; set; }
 
         public string Nome { get; set; } = string.Empty;
 
-        public string Email { get; set; } = string.Empty;
+        public decimal ValorObejtivo { get; set; }
 
-        public string SenhaHash { get; set; } = string.Empty;
+        public int ValorAtual { get; set; }
+
+
+        public int UsuarioId { get; set; }
+
+        public Usuario Usuario { get; set; } = null!;
         
-        public bool IsAtivo { get; set; }
-    }
+        }
 }

@@ -15,6 +15,6 @@ namespace Sistema_de_Gastos.API.Models
         public DateTime DataCriacao { get; set; } = DateTime.Now;
 
         public bool IsAtivo { get; set; } = true;
-        
+    
     }
 }

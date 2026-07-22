@@ -10,5 +10,13 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<Categoria> Categorias { get; set; } = null!;
+    public DbSet<Categoria> Categorias { get; set; }
+
+    public DbSet<Transaçao> Transaçoes { get; set; }
+
+    public DbSet<Usuario> Usuarios { get; set; }
+
+    public DbSet<MetaFinanceira> MetasFinanceiras { get; set; }
+
+    
 }
