@@ -2,7 +2,7 @@ using static Sistema_de_Gastos.API.Models.Enums;
 
 namespace Sistema_de_Gastos.API.Models
 {
-    public class Transacao
+    public class Transaçao
     {
         public int Id { get; set; }
 
