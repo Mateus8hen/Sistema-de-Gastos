@@ -11,7 +11,7 @@ namespace Sistema_de_Gastos.API.Models
 
         public string Nome { get; set; } = string.Empty;
 
-        public decimal ValorObejtivo { get; set; }
+        public decimal ValorObjetivo { get; set; }
 
         public int ValorAtual { get; set; }
 
@@ -20,5 +20,5 @@ namespace Sistema_de_Gastos.API.Models
 
         public Usuario Usuario { get; set; } = null!;
         
-        }
+    }
 }

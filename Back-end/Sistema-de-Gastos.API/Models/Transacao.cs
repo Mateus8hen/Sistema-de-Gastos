@@ -2,7 +2,7 @@ using static Sistema_de_Gastos.API.Models.Enums;
 
 namespace Sistema_de_Gastos.API.Models
 {
-    public class Transaçao
+    public class Transacao
     {
         public int Id { get; set; }
 
@@ -11,6 +11,8 @@ namespace Sistema_de_Gastos.API.Models
         public TipoTransacao Tipo { get; set; }
 
         public decimal Valor { get; set; }
+
+        public DateTime Fechamento { get; set; }
 
 
         public int CategoriaID { get; set; }
