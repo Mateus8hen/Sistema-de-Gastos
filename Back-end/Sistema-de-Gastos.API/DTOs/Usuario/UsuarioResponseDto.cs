@@ -11,8 +11,6 @@ namespace Sistema_de_Gastos.API.DTOs.Usuario
 
         public string? Email { get; set; }
 
-        public string? SenhaHash { get; set; }
-
         public int Id { get; set; }
     }
 }

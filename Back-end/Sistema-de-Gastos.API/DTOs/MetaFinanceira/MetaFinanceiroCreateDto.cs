@@ -12,7 +12,5 @@ namespace Sistema_de_Gastos.API.DTOs.MetaFinanceira
         public decimal ValorObjetivo { get; set; }
         
 
-        public int UsuarioId { get; set; }
-
     }
 }
