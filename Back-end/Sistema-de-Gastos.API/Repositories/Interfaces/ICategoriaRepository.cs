@@ -10,13 +10,11 @@ namespace Sistema_de_Gastos.API.Interfaces
     {
         Task<Categoria> CreateAsync(Categoria categoria);
 
-        Task<IList<Categoria>> GetAllAsync();
+        Task<IList<Categoria>> GetAllCategoriaAsync();
 
-        Task<Categoria?> GetByIdAsync(int id);
+        Task<Categoria?> GetCategoriaByNameAsync(string name);
 
-        Task<Categoria> GetbyNameAsync(string nome);
-
-        Task<Categoria> UpdateAsync();
+        Task<Categoria> UpdateCategoriaAsync(Categoria categoria);
 
         Task<bool> DeleteAsync(int id);
 
