@@ -14,6 +14,6 @@ namespace Sistema_de_Gastos.API.Interfaces
 
         Task<Usuario> CreateUsuarioAsync(Usuario usuario);
 
-        Task<Usuario?> UpdateUsuarioAsync();
+        Task<Usuario?> UpdateUsuarioAsync(Usuario usuario);
     }
 }
