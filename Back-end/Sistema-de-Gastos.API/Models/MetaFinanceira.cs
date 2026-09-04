@@ -15,7 +15,6 @@ namespace Sistema_de_Gastos.API.Models
 
         public int ValorAtual { get; set; }
 
-
         public int UsuarioId { get; set; }
 
         public Usuario Usuario { get; set; } = null!;

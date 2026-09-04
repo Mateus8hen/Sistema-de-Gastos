@@ -9,13 +9,19 @@ using Sistema_de_Gastos.API.Models;
 
 namespace Sistema_de_Gastos.API.Repositories
 {
-    public class Usuariorepository : IUsuarioRepository
+    public class Usuariorepository(AppDbContext context) : IUsuarioRepository
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context = context;
 
-        public Usuariorepository(AppDbContext context)
+        public async Task<IList<Usuario>> GetAllUsuariosAsync()
         {
-            _context = context;
+            return await _context.Usuarios.ToListAsync();
+        }
+
+        public async Task<Usuario?> GetUsuarioByIdAsync(int id)
+        {
+            return await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<Usuario?> GetUsuarioByNameAsync(string nome)
@@ -37,9 +43,23 @@ namespace Sistema_de_Gastos.API.Repositories
             return usuario;
         }
 
-        public async Task<Usuario?> UpdateUsuarioAsync(Usuario usuario)
+        public async Task<Usuario> UpdateUsuarioAsync(Usuario usuario)
         {
             _context.Usuarios.Update(usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
+        }
+
+        public async Task<Usuario> InativarUsuarioAsync(int id)
+        {
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == id);
+
+            if (usuario == null)
+                return null!;
+
+            usuario.IsAtivo = false;
+
             await _context.SaveChangesAsync();
             return usuario;
         }

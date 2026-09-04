@@ -9,15 +9,10 @@ using Sistema_de_Gastos.API.Models;
 
 namespace Sistema_de_Gastos.API.Repositories
 {
-    public class CategoriaRepository : ICategoriaRepository
+    public class CategoriaRepository(AppDbContext context) : ICategoriaRepository
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context = context;
 
-        public CategoriaRepository(AppDbContext context)
-        {
-            _context = context;
-        }
-        
         public async Task<IList<Categoria>> GetAllCategoriaAsync()
         {
             return await _context.Categorias.ToListAsync();

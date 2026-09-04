@@ -8,12 +8,18 @@ namespace Sistema_de_Gastos.API.Interfaces
 {
     public interface IUsuarioRepository
     {
+        Task<Usuario?> GetUsuarioByIdAsync(int id);
+
+        Task<IList<Usuario>> GetAllUsuariosAsync();
+
         Task<Usuario?> GetUsuarioByNameAsync(string nome);
 
         Task<Usuario?> GetUsuarioByEmailAsync(string email);
 
         Task<Usuario> CreateUsuarioAsync(Usuario usuario);
 
-        Task<Usuario?> UpdateUsuarioAsync(Usuario usuario);
+        Task<Usuario> UpdateUsuarioAsync(Usuario usuario);
+
+        Task<Usuario> InativarUsuarioAsync(int id);
     }
 }
