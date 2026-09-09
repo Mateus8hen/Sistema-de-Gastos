@@ -13,7 +13,7 @@ namespace Sistema_de_Gastos.API.Repositories
     {
        private readonly AppDbContext _context = context;
 
-        public async Task<Transacao> CreateAsync(Transacao transacao)
+        public async Task<Transacao> CreateTransacaoAsync(Transacao transacao)
         {
             _context.Transacoes.Add(transacao);
             await _context.SaveChangesAsync();

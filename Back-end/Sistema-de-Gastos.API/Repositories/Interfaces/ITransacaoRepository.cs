@@ -8,7 +8,7 @@ namespace Sistema_de_Gastos.API.Repositories.Interfaces
 {
     public interface ITransacaoRepository
     {
-        Task<Transacao> CreateAsync(Transacao transacao);
+        Task<Transacao> CreateTransacaoAsync(Transacao transacao);
 
         Task<IList<Transacao>> GetAllTransacaoAsync();
 
