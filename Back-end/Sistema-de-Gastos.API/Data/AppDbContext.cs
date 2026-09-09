@@ -12,7 +12,7 @@ public class AppDbContext : DbContext
 
     public DbSet<Categoria> Categorias { get; set; }
 
-    public DbSet<Transaçao> Transaçoes { get; set; }
+    public DbSet<Transacao> Transacoes { get; set; }
 
     public DbSet<Usuario> Usuarios { get; set; }
 
