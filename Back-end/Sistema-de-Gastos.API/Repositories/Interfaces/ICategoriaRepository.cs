@@ -12,6 +12,8 @@ namespace Sistema_de_Gastos.API.Interfaces
 
         Task<IList<Categoria>> GetAllCategoriaAsync();
 
+        Task<Categoria?> GetCategoriaByIdAsync(int id);
+
         Task<Categoria?> GetCategoriaByNameAsync(string name);
 
         Task<Categoria> UpdateCategoriaAsync(Categoria categoria);
