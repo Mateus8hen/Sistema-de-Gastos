@@ -39,5 +39,28 @@ namespace Sistema_de_Gastos.API.Services
             return await _context.CreateAsync(categoria);
         }
 
+        public async Task<Categoria> UpdateCategoriaAsync(Categoria categoria)
+        {
+            if (categoria == null)
+                throw new ArgumentNullException(nameof(categoria));
+
+            var categoriaExistente = await _context.GetCategoriaByIdAsync(categoria.Id);
+
+            if (categoriaExistente == null)
+                throw new ArgumentException("Categoria não encontrada.");
+
+            return await _context.UpdateCategoriaAsync(categoria);
+        }
+
+        public async Task<bool> DeleteCategoriaAsync(int id)
+        {
+            var categoria = await _context.GetCategoriaByIdAsync(id);
+
+            if (categoria == null)
+                throw new ArgumentException("Categoria não encontrada.");
+
+            return await _context.DeleteAsync(id);
+        }
+
     }
 }

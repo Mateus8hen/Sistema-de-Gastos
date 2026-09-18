@@ -9,7 +9,7 @@ using Sistema_de_Gastos.API.Models;
 
 namespace Sistema_de_Gastos.API.Repositories
 {
-    public class Usuariorepository(AppDbContext context) : IUsuarioRepository
+    public class UsuarioRepository(AppDbContext context) : IUsuarioRepository
     {
         private readonly AppDbContext _context = context;
 

@@ -9,7 +9,7 @@ using Sistema_de_Gastos.API.Repositories.Interfaces;
 
 namespace Sistema_de_Gastos.API.Repositories
 {
-    public class Transacaorepository (AppDbContext context) : ITransacaoRepository
+    public class TransacaoRepository (AppDbContext context) : ITransacaoRepository
     {
        private readonly AppDbContext _context = context;
 
