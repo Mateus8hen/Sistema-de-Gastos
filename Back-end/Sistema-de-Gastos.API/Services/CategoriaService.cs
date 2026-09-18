@@ -1,42 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Sistema_de_Gastos.API.Data;
+
 using Sistema_de_Gastos.API.Interfaces;
 using Sistema_de_Gastos.API.Models;
 using Sistema_de_Gastos.API.Services.Interface;
 
 namespace Sistema_de_Gastos.API.Services
 {
-    public class CategoriaService(ICategoriaRepository Repository) : ICategoriaService
+    public class CategoriaService(ICategoriaRepository repository)
+        : ICategoriaService
     {
-        private readonly ICategoriaRepository _context = Repository;
+        private readonly ICategoriaRepository _repository = repository;
 
         public async Task<IList<Categoria>> GetAllCategoriaAsync()
-        {
-            return await _context.GetAllCategoriaAsync();
-        }
+            => await _repository.GetAllCategoriaAsync();
 
         public async Task<Categoria?> GetCategoriaByIdAsync(int id)
-        {
-            return await _context.GetCategoriaByIdAsync(id);
-        }
+            => await _repository.GetCategoriaByIdAsync(id);
 
         public async Task<Categoria?> GetCategoriaByNameAsync(string name)
-        {
-            return await _context.GetCategoriaByNameAsync(name);
-        }
+            => await _repository.GetCategoriaByNameAsync(name);
 
         public async Task<Categoria> CreateCategoriaAsync(Categoria categoria)
         {
             if (categoria == null)
                 throw new ArgumentNullException(nameof(categoria));
 
-            if (await _context.GetCategoriaByNameAsync(categoria.Nome) != null)
+            if (await _repository.GetCategoriaByNameAsync(categoria.Nome) != null)
                 throw new ArgumentException("Categoria já existe.");
 
-            return await _context.CreateAsync(categoria);
+            return await _repository.CreateAsync(categoria);
         }
 
         public async Task<Categoria> UpdateCategoriaAsync(Categoria categoria)
@@ -44,23 +35,18 @@ namespace Sistema_de_Gastos.API.Services
             if (categoria == null)
                 throw new ArgumentNullException(nameof(categoria));
 
-            var categoriaExistente = await _context.GetCategoriaByIdAsync(categoria.Id);
-
-            if (categoriaExistente == null)
+            if (await _repository.GetCategoriaByIdAsync(categoria.Id) == null)
                 throw new ArgumentException("Categoria não encontrada.");
 
-            return await _context.UpdateCategoriaAsync(categoria);
+            return await _repository.UpdateCategoriaAsync(categoria);
         }
 
         public async Task<bool> DeleteCategoriaAsync(int id)
         {
-            var categoria = await _context.GetCategoriaByIdAsync(id);
-
-            if (categoria == null)
+            if (await _repository.GetCategoriaByIdAsync(id) == null)
                 throw new ArgumentException("Categoria não encontrada.");
 
-            return await _context.DeleteAsync(id);
+            return await _repository.DeleteAsync(id);
         }
-
     }
 }

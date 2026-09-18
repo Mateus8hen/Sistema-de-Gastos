@@ -21,5 +21,6 @@ namespace Sistema_de_Gastos.API.Interfaces
         Task<Usuario> UpdateUsuarioAsync(Usuario usuario);
 
         Task<Usuario> InativarUsuarioAsync(int id);
+       
     }
 }
