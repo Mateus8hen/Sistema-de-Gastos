@@ -19,6 +19,8 @@ namespace Sistema_de_Gastos.API.Interfaces
         Task<Categoria> UpdateCategoriaAsync(Categoria categoria);
 
         Task<bool> DeleteAsync(int id);
-
-    }
+        
+        Task<IList<Transacao>> GetTransacoesByCategoriaIdAsync(int id);
+        Task<Transacao?> GetTransacaoByIdAsync(int id);
+  }
 }
