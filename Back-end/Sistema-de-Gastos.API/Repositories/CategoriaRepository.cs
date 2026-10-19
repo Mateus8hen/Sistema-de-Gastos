@@ -30,6 +30,19 @@ namespace Sistema_de_Gastos.API.Repositories
             .FirstOrDefaultAsync(c => c.Nome == name);
         }
 
+        public async Task<IList<Transacao>> GetTransacoesByCategoriaIdAsync(int categoriaId)
+        {
+            return await _context.Transacoes
+                .Where(t => t.Categoria != null && t.Categoria.Id == categoriaId)
+                .ToListAsync();
+        }
+
+        public async Task<Transacao?> GetTransacaoByIdAsync(int id)
+        {
+            return await _context.Transacoes
+                .FirstOrDefaultAsync(t => t.Id == id);
+        }
+
         public async Task<Categoria> CreateAsync(Categoria categoria)
         {
             _context.Categorias.Add(categoria);

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Sistema-de-Gastos.API.props" />
-</Project>
