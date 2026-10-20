@@ -327,11 +327,6 @@ C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-d
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\Sistema-de-Gastos.API.sourcelink.json
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets\msbuild.Sistema-de-Gastos.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets\msbuild.build.Sistema-de-Gastos.API.props
-C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Sistema-de-Gastos.API.props
-C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Sistema-de-Gastos.API.props
-C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\scopedcss\bundle\Sistema-de-Gastos.API.styles.css
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\Sistema-.92975DE8.Up2Date
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\Sistema-de-Gastos.API.dll
@@ -339,3 +334,11 @@ C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-d
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\Sistema-de-Gastos.API.pdb
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\Sistema-de-Gastos.API.genruntimeconfig.cache
 C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\ref\Sistema-de-Gastos.API.dll
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\bin\Debug\net8.0\Sistema-de-Gastos.API.staticwebassets.endpoints.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Mateus\Documents\PROJETOS PESSOAIS\Sistema-de-Gastos\Back-end\Sistema-de-Gastos.API\obj\Debug\net8.0\swae.build.ex.cache

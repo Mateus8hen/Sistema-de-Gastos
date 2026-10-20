@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj": {}
+    "C:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj": {
+    "C:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
+        "projectUniqueName": "C:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
         "projectName": "Sistema-de-Gastos.API",
-        "projectPath": "c:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
+        "projectPath": "C:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\Sistema-de-Gastos.API.csproj",
         "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\obj\\",
+        "outputPath": "C:\\Users\\Mateus\\Documents\\PROJETOS PESSOAIS\\Sistema-de-Gastos\\Back-end\\Sistema-de-Gastos.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -37,10 +38,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
@@ -85,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.424/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
