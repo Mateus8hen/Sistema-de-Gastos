@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Sistema_de_Gastos.API.Data;
+using Sistema_de_Gastos.API.Interfaces;
+using Sistema_de_Gastos.API.Repositories;
+using Sistema_de_Gastos.API.Services;
+using Sistema_de_Gastos.API.Services.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +19,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Controllers
 builder.Services.AddControllers();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
