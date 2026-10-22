@@ -6,19 +6,19 @@ using Sistema_de_Gastos.API.Models;
 
 namespace Sistema_de_Gastos.API.Services.Interface
 {
-    public interface ICategoriaService
-    {
-        Task<Categoria> CreateCategoriaAsync(Categoria categoria);
+  public interface ICategoriaService
+  {
+    Task<Categoria> CreateCategoriaAsync(Categoria categoria);
 
-        Task<IList<Categoria>> GetAllCategoriaAsync();
+    Task<IList<Categoria>> GetAllCategoriaAsync();
 
-        Task<Categoria?> GetCategoriaByIdAsync(int id);
+    Task<Categoria?> GetCategoriaByIdAsync(int id);
 
-        Task<Categoria?> GetCategoriaByNameAsync(string name);
+    Task<Categoria?> GetCategoriaByNameAsync(string name);
 
-        Task<Categoria> UpdateCategoriaAsync(Categoria categoria);
+    Task<Categoria> UpdateCategoriaAsync(Categoria categoria);
 
-        Task<bool> DeleteCategoriaAsync(int id);
-        
-    }
+    Task<bool> DeleteCategoriaAsync(int id);
+
+  }
 }

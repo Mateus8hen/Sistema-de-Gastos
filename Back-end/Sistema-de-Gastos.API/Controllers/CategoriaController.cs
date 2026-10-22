@@ -13,26 +13,33 @@ public class CategoriaController(ICategoriaService service) : ControllerBase
     public async Task<ActionResult<IEnumerable<CategoriaResponseDto>>> GetAll()
     {
         var categorias = await service.GetAllCategoriaAsync();
-        return Ok(categorias.Select(MapToResponse));
+        return Ok(categorias.Select(MapToResponseDTO));
     }
 
-    [HttpGet("{id:int}")]
+    [HttpGet("{id}")]
     public async Task<ActionResult<CategoriaResponseDto>> GetById(int id)
     {
         var categoria = await service.GetCategoriaByIdAsync(id);
-        return categoria is null ? NotFound() : Ok(MapToResponse(categoria));
+        if (categoria == null)
+        {
+            return NotFound();
+        }
+        return Ok(MapToResponseDTO(categoria));
     }
 
-    [HttpGet("nome/{nome}")]
-    public async Task<ActionResult<CategoriaResponseDto>> GetByName(string nome)
+    [HttpGet("name/{name}")]
+    public async Task<ActionResult<CategoriaResponseDto>> GetByName(string name)
     {
-        var categoria = await service.GetCategoriaByNameAsync(nome);
-        return categoria is null ? NotFound() : Ok(MapToResponse(categoria));
+        var categoria = await service.GetCategoriaByNameAsync(name);
+        if (categoria == null)
+        {
+            return NotFound();
+        }
+        return Ok(MapToResponseDTO(categoria));
     }
 
     [HttpPost]
-    public async Task<ActionResult<CategoriaResponseDto>> Create(
-        CategoriaCreateDto dto)
+    public async Task<ActionResult<CategoriaResponseDto>> Create(CategoriaCreateDto dto)
     {
         try
         {
@@ -42,7 +49,7 @@ public class CategoriaController(ICategoriaService service) : ControllerBase
                 Descricao = dto.Descricao
             });
 
-            var response = MapToResponse(categoria);
+            var response = MapToResponseDTO(categoria);
             return CreatedAtAction(nameof(GetById), new { id = categoria.Id }, response);
         }
         catch (ArgumentException exception)
@@ -56,60 +63,46 @@ public class CategoriaController(ICategoriaService service) : ControllerBase
         }
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<CategoriaResponseDto>> Update(
-        int id,
-        CategoriaCreateDto dto)
+    [HttpPut("{id}")]
+    public async Task<ActionResult<CategoriaResponseDto>> Update(int id, CategoriaCreateDto dto)
     {
-        if (await service.GetCategoriaByIdAsync(id) is null)
+        var categoria = await service.GetCategoriaByIdAsync(id);
+        if (categoria == null)
+        {
             return NotFound();
-
-        try
-        {
-            var categoria = await service.UpdateCategoriaAsync(new Categoria
-            {
-                Id = id,
-                Nome = dto.Nome,
-                Descricao = dto.Descricao
-            });
-
-            return Ok(MapToResponse(categoria));
         }
-        catch (ArgumentException exception)
-        {
-            return Conflict(new ProblemDetails
-            {
-                Title = "Categoria inválida",
-                Detail = exception.Message,
-                Status = StatusCodes.Status409Conflict
-            });
-        }
+
+        categoria.Nome = dto.Nome;
+        categoria.Descricao = dto.Descricao;
+
+        var atualizarCategoria = await service.UpdateCategoriaAsync(categoria);
+        return Ok(MapToResponseDTO(atualizarCategoria));
     }
 
-    [HttpDelete("{id:int}")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        try
-        {
-            await service.DeleteCategoriaAsync(id);
-            return NoContent();
-        }
-        catch (ArgumentException)
+        var categoria = await service.GetCategoriaByIdAsync(id);
+        if (categoria == null)
         {
             return NotFound();
         }
-        catch (InvalidOperationException exception)
+
+        var Apagarcategoria = await service.DeleteCategoriaAsync(id);
+        if (!Apagarcategoria)
         {
-            return Conflict(new ProblemDetails
+            return StatusCode(StatusCodes.Status500InternalServerError, new ProblemDetails
             {
-                Title = "Categoria não pode ser excluída",
-                Detail = exception.Message,
-                Status = StatusCodes.Status409Conflict
+                Title = "Erro ao deletar categoria",
+                Detail = "Ocorreu um erro ao tentar deletar a categoria.",
+                Status = StatusCodes.Status500InternalServerError
             });
         }
+
+        return NoContent();
     }
 
-    private static CategoriaResponseDto MapToResponse(Categoria categoria)
+    private static CategoriaResponseDto MapToResponseDTO(Categoria categoria)
     {
         return new CategoriaResponseDto
         {

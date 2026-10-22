@@ -12,5 +12,7 @@ namespace Sistema_de_Gastos.API.DTOs.Usuario
         public string? Email { get; set; }
 
         public int Id { get; set; }
+
+        public bool IsAtivo { get; set; }
     }
 }
