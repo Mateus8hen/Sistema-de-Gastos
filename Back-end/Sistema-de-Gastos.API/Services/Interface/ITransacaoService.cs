@@ -8,7 +8,7 @@ namespace Sistema_de_Gastos.API.Services.Interface
         Task<IList<Transacao>> GetAllTransacaoAsync();
         Task<Transacao?> GetTransacaoByIdAsync(int id);
         Task<Transacao?> GetTransacaoByNameAsync(string name);
-        Task<Transacao> UpdateTransacaoAsync(Transacao transacao);
+        Task<Transacao> UpdateTransacaoAsync(int id, Transacao transacao);
         Task<bool> DeleteTransacaoAsync(int id);
     }
 }

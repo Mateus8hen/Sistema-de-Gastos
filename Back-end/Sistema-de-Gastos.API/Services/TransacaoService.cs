@@ -40,6 +40,24 @@ namespace Sistema_de_Gastos.API.Services
             return await _repository.UpdateTransacaoAsync(transacao);
         }
 
+        public async Task<Transacao> UpdateTransacaoAsync(int id, Transacao transacao)
+        {
+            if (transacao == null)
+                throw new ArgumentNullException(nameof(transacao));
+
+            var existingTransacao = await _repository.GetTransacaoByIdAsync(id);
+            if (existingTransacao == null)
+                throw new ArgumentException("Transação não encontrada.");
+
+            existingTransacao.Nome = transacao.Nome;
+            existingTransacao.Valor = transacao.Valor;
+            existingTransacao.Vencimento = transacao.Vencimento;
+            existingTransacao.CategoriaID = transacao.CategoriaID;
+            existingTransacao.UsuarioId = transacao.UsuarioId;
+
+            return await _repository.UpdateTransacaoAsync(existingTransacao);
+        }
+
         public async Task<bool> DeleteTransacaoAsync(int id)
         {
             if (await _repository.GetTransacaoByIdAsync(id) == null)

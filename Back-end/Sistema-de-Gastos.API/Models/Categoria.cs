@@ -15,6 +15,14 @@ namespace Sistema_de_Gastos.API.Models
         public DateTime Criacao { get; set; } = DateTime.Now;
 
         public bool IsAtivo { get; set; } = true;
+
+
+        public int UsuarioId { get; set; }
+
+        public Usuario Usuario { get; set; } = null!;
+
+
+        public ICollection<Transacao> Transacoes { get; set; } = [];
     
     }
 }
