@@ -5,8 +5,7 @@ using Sistema_de_Gastos.API.Services.Interface;
 
 namespace Sistema_de_Gastos.API.Services
 {
-    public class CategoriaService(ICategoriaRepository repository)
-        : ICategoriaService
+    public class CategoriaService(ICategoriaRepository repository) : ICategoriaService
     {
         private readonly ICategoriaRepository _repository = repository;
 

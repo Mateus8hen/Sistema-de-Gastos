@@ -13,6 +13,8 @@ namespace Sistema_de_Gastos.API.Models
         public decimal Valor { get; set; }
 
         public DateTime Vencimento { get; set; }
+    
+        public DateTime Criacao { get; set; } = DateTime.Now;
 
 
         public int CategoriaID { get; set; }
@@ -24,7 +26,7 @@ namespace Sistema_de_Gastos.API.Models
 
         public Usuario Usuario { get; set; } = null!;
 
-        public DateTime Criacao { get; set; } = DateTime.Now;
+        
 }       
 
 }

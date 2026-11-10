@@ -4,8 +4,7 @@ using Sistema_de_Gastos.API.Services.Interface;
 
 namespace Sistema_de_Gastos.API.Services
 {
-    public class TransacaoService(ITransacaoRepository repository)
-        : ITransacaoService
+    public class TransacaoService(ITransacaoRepository repository) : ITransacaoService
     {
         private readonly ITransacaoRepository _repository = repository;
 

@@ -5,7 +5,7 @@ using Sistema_de_Gastos.API.Services.Interface;
 
 namespace Sistema_de_Gastos.API.Services
 {
-    public class UsuarioService(IUsuarioRepository repository)  : IUsuarioService
+    public class UsuarioService(IUsuarioRepository repository) : IUsuarioService
     {
         private readonly IUsuarioRepository _repository = repository;
 
